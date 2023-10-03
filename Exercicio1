@@ -1,0 +1,31 @@
+package diferencavalores;
+
+import java.util.Scanner;
+
+public class DiferencaValores {
+
+    /*Faça um programa que leia dois valores numéricos inteiros e apresente
+    o resultado da diferença do maior valor pelo menor valor. Se os valores
+    forem iguais, o programa deve mostrar zero.
+    */
+    public static void main(String[] args) {
+      
+        Scanner leitura = new Scanner(System.in);
+        
+        int n1, n2, resultado;
+        
+        System.out.println("Digite o Primeiro Número: ");
+        n1 = leitura.nextInt();
+        System.out.println("Digite o Seguno Número: ");
+        n2 = leitura.nextInt();
+        
+        if (n1>=n2)
+            resultado = n1-n2;
+        else
+            resultado = n2-n1;
+        System.out.println("O Resultado é: " + resultado);
+              
+        
+    }
+    
+}
