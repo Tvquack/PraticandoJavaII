@@ -16,7 +16,7 @@ public class DiferencaValores {
         
         System.out.println("Digite o Primeiro Número: ");
         n1 = leitura.nextInt();
-        System.out.println("Digite o Seguno Número: ");
+        System.out.println("Digite o Segundo Número: ");
         n2 = leitura.nextInt();
         
         if (n1>=n2)
