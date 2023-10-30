@@ -1,0 +1,48 @@
+package formulabaskara;
+
+import static java.lang.Math.sqrt;
+import java.util.Scanner;
+
+public class FormulaBaskara {
+
+     /*Construa um programa que leia três valores numéricos (representados pelas 
+      variáveis A, B e C) e faça o cálculo do delta de uma equação de segundo 
+      grau, segundo a fórmula de Báskara. O programa deve mostrar quantas raízes 
+      reais a equação possui (delta < 0 – mostrar uma mensagem dizendo que a 
+      equação não possui raízes reais, delta > 0 – mostrar que possui duas 
+      raízes reais, delta = 0 – mostrar que possui uma única raiz real).
+     */
+
+  public static void main(String[] args) {
+        
+        Scanner form = new Scanner(System.in);
+        double a,b,c;
+        double delta,x1,x2;
+        System.out.println("Informe o valor de A: ");
+        a = form.nextDouble();
+        System.out.println("Informe o valor de B: ");
+        b = form.nextDouble();
+        System.out.println("Informe o valor de C: ");
+        c = form.nextDouble();
+        delta = (b*b)-(4*a*c);
+        if (delta>=0){
+                 x1 = (-b + sqrt(delta))/(2*a);
+                 x2 = (-b - sqrt(delta))/(2*a);
+                 System.out.println("x1 = " + x1);
+                 System.out.println("x2 = " + x2);
+                 System.out.println("Delta maior que 0 \n");
+                 System.out.println("Possui duas raízes reais");
+                 
+        } else{
+              if (delta==0){
+                x1 = (-b + sqrt(delta))/(2*a);
+                System.out.println("x1 e x2 é igual a 0" + x1);
+                System.out.println("Delta igual a 0 \n");
+                System.out.println("Possui uma única raiz real");
+              } else{ 
+                 System.out.println("Delta menor ue 0 \n");
+                 System.out.println("Equação não possui raízes reais!");
+              }
+        }
+    }        
+}
