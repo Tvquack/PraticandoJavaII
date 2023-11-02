@@ -1,0 +1,47 @@
+package divisiveispor;
+
+import java.util.Scanner;
+
+public class DivisiveisPor {
+
+    /*Desenvolva um programa que leia quatro valores numéricos inteiros e 
+      mostre os valores que são divisíveis por 2 e 3.
+    */
+
+    /*Faça um programa que leia quatro valores numéricos inteiros e 
+      mostre os valores que são divisíveis por 2 ou 3.
+    */
+
+    public static void main(String[] args) {
+       
+        Scanner num = new Scanner (System.in);
+        int n1, n2, n3, n4;
+        
+        System.out.println("Digite o primeiro número: ");
+        n1 = num.nextInt();
+        System.out.println("Digite o segundo número: ");
+        n2 = num.nextInt();
+        System.out.println("Digite o terceiro número: ");
+        n3 = num.nextInt();
+        System.out.println("Digite o quarto número: ");
+        n4 = num.nextInt();
+                                
+        if (n1 % 2==0 && n1 % 3==0){
+            System.out.println("O Valor é divisivel por 2 e 3: " + n1);
+        }
+        else {
+            if (n2 % 2==0 && n2 % 3==0){
+             System.out.println("O Valor é divisivel por 2 e 3: " + n2);
+            }
+        } 
+        if(n3 % 2==0 && n3 % 3==0){
+          System.out.println("O Valor é divisivel por 2 e 3: " + n3);
+        }
+        if (n4 % 2==0 && n4 % 3==0){
+         System.out.println("O Valor é divisivel por 2 e 3: " + n4);
+        }
+                            
+                
+    }
+        
+}
