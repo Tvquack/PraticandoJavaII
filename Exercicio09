@@ -1,0 +1,36 @@
+package menorque;
+
+import java.util.Scanner;
+
+public class MenorQue {
+
+    /*Faça um programa que leia três valores numéricos inteiros, identifique e 
+      apresente o menor valor informado.
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         Scanner teclado = new Scanner(System.in);
+        int n1, n2, n3;
+        
+        System.out.println("Informe o priemrio valor: ");
+        n1=teclado.nextInt();
+        System.out.println("Informe o segundo valor: ");
+        n2=teclado.nextInt();
+        System.out.println("Informe o terceiro valor: ");
+        n3=teclado.nextInt();
+        
+        if (n1 < n2 && n1 < n3){
+            System.out.println("O primeiro valor é o menor: " + n1);
+        }
+        else {
+            if (n2 < n1 && n2 < n3){
+                System.out.println("o segundo valor é o menor: " + n2);
+            }
+            
+            if (n3 < n1 && n3 < n2){
+                System.out.println("o terceiro valor é o menor: " + n3);
+            }
+        }
+    }
+    
+}
