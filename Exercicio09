@@ -1,0 +1,31 @@
+package reajuste;
+
+import java.util.Scanner;
+
+public class Reajuste {
+
+    /*Uma empresa decide dar um aumento de 30% aos funcionários cujo salário é 
+      inferior a 5000. Escreva um programa que possa ser utilizado para efetuar 
+      o cálculo do salário reajustado de um funcionário, a partir do valor do 
+      salário informado pelo usuário.
+     */
+    public static void main(String[] args) {
+        
+        Scanner valor = new Scanner(System.in);
+        
+        double salario, aumento, reajuste;
+        
+        System.out.println("Informe o valor do salário: ");
+        salario = valor.nextDouble();
+        aumento = salario * (0.30/10);
+        
+        if (salario <= 5000){
+            reajuste = salario + aumento;
+            System.out.println("Seu novo salário é: R$" + reajuste);
+        }
+        else {
+            System.out.println("Seu salário não teve auemnto");
+        }
+    }
+    
+}
