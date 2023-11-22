@@ -1,0 +1,68 @@
+package notaconceito;
+
+import java.util.Scanner;
+
+public class NotaConceito {
+
+    /*A nota final de um estudante é calculada a partir de três notas 
+      atribuídas, respectivamente, a um trabalho de laboratório, a uma avaliação 
+      semestral e a um exame final. A média das três notas mencionadas obedece 
+      aos pesos a seguir:
+    
+               Nota               Peso
+       Trabalho de laboratório  -   2
+       Avaliação semestral      -   3
+       Exame final              -   5
+    
+      Faça um programa que receba as três notas, calcule e mostre a média 
+      ponderada e o conceito que segue a tabela:
+    
+          Média Ponderada      Conceito
+            8,0 a 10,0            A
+            7,0 a 8,0             B
+            6,0 a 7,0             C
+            5,0 a 6,0             D
+            0,0 a 5,0             E
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner nota = new Scanner(System.in);
+        
+        String nome;
+        double tl, as, ef, peso1 = 2, peso2 = 3, peso3 = 5;
+        double mediaponderada;
+        
+        System.out.println("Digite o Nome do ALuno: ");
+        nome = nota.nextLine();
+        System.out.println("Digite a Primeira Nota: ");
+        tl = nota.nextDouble();
+        System.out.println("Digite a Segunda Nota:");
+        as = nota.nextDouble();
+        System.out.println("Digite a Terceira Nota:");
+        ef = nota.nextDouble();
+        mediaponderada = ((tl * peso1) + (as * peso2) + (ef * peso3)) /
+                (peso1 + peso2 + peso3);
+        System.out.println("A Média Ponderada é: " + mediaponderada);
+        
+        if (mediaponderada >= 0 && mediaponderada < 5){
+            System.out.println("Seu conceito é E");
+        }
+        
+        else {
+            if (mediaponderada >= 5 && mediaponderada < 6){
+                System.out.println("Seu conceito é D");                
+            }
+            if (mediaponderada >= 6 && mediaponderada < 7){
+                System.out.println("Seu conceito é C");
+            }
+            if (mediaponderada >= 7 && mediaponderada < 8){
+                System.out.println("Seu conceito é B");
+            }
+            if (mediaponderada >= 8 && mediaponderada < 10){
+                System.out.println("Seu conceito é A");
+            } 
+        }
+                             
+    }
+    
+}
